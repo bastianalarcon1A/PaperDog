@@ -27,11 +27,11 @@ JavaScript
 
 Estructura del HTML
 body
-├── nav#navbar  → enlaces a #inicio, #portafolio, #reserva y #contacto
-├── main
-│   ├── section#inicio
-│   ├── section#portafolio
-│   └── section#reserva
+nav#navbar  → enlaces a #inicio, #portafolio, #reserva y #contacto
+main
+── ection#inicio
+── section#portafolio
+── ection#reserva
 └── footer#contacto 
 
 Equipo:
