@@ -1,38 +1,39 @@
 PaperDog - Artista Tatuador
 
-Sitio web de una sola página para PaperDog, artista tatuador.
-Presenta al artista, muestra su portafolio de trabajos y permite a los clientes solicitar una reserva.
+Descripción del Proyecto
+Sitio web de una sola página (Landing Page) para PaperDog, artista tatuador ubicado en Concepción. Este proyecto presenta información del artista, muestra su portafolio de trabajos y permite a los clientes potenciales solicitar una reserva de horas de forma rápida, resolviendo el problema de pérdida de clientes por mensajes de Instagram.
 
-Estado: en desarrollo. La estructura base está armada y hay secciones pendientes de completar por el equipo.
+**Estado:** MVP Finalizado (Evaluación 3).
 
-Estructura del sitio
+Tecnologías Utilizadas
+-HTML5
+-CSS3
+-JavaScript (Vanilla JS, Manipulación del DOM, Fetch API, LocalStorage)
+-Bootstrap 5.3.2 (CDN)
 
-La página se organiza en secciones a las que se accede mediante anclas desde la barra de navegación:
+Estructura del Sitio
+La página se organiza en secciones a las que se accede mediante anclas (scroll suave) desde la barra de navegación:
 
-Sección	ID	Descripción	Estado
-Navegación	#navbar	Menú con logo "PaperDog" y enlaces a todas las secciones (Encargado Bastian Alarcon)
+| Sección | ID | Descripción | Encargado(a) |
+| :--- | :--- | :--- | :--- |
+| Navegación | `#navbar` | Menú fijo con logo "PaperDog" y enlaces a todas las secciones. | Bastian Alarcón |
+| Inicio | `#inicio` | Encabezado principal (Hero): "PaperDog - Artista Tatuador". | Cristóbal Villalobos |
+| Portafolio | `#portafolio` | Galería de trabajos del artista (Carga dinámica con JSON). | Bastian Alarcón |
+| Reserva | `#reserva` | Formulario con validación visual para agendar una hora. | Ivanna Villarroel |
+| Contacto | `#contacto` | Footer con datos de contacto y redes sociales. | Cristóbal Villalobos |
 
-Inicio	#inicio	Encabezado principal: "PaperDog - Artista Tatuador"	(Encargado Cristóbal Villalobos)
+Cómo ejecutar el proyecto
+Para revisar este proyecto en tu computador local, sigue estos sencillos pasos:
 
-Portafolio	#portafolio	Galería de trabajos del artista	Pendiente: título y contenido de prueba (Encargado Bastian Alarcon)
+1. Clona este repositorio usando el comando:
+ [(https://github.com/bastianalarcon1A/PaperDog)]
+2. Abre la carpeta del proyecto en tu computador.
+3. Haz doble clic en el archivo `index.html`. El sitio se abrirá automáticamente en tu navegador predeterminado.
+El proyecto no requiere instalación de dependencias ni servidores locales, ya que las librerías se importan por CDN y el código se ejecuta del lado del cliente.
 
-Reserva	#reserva	Formulario para reservar una hora	Pendiente: título y estructura base del formulario (Encargada Ivanna Villarroel)
+Equipo de Desarrollo (Equipo Angelina)
+Proyecto desarrollado de forma colaborativa para la asignatura de Interfaz de Usuario:
 
-Contacto	#contacto	Footer con datos de contacto	Pendiente: <footer id="contacto">(Encargado Cristóbal Villalobos)
-
-Tecnologías
-HTML5
-CSS 3
-JavaScript
-
-Estructura del HTML
-body
-nav#navbar  → enlaces a #inicio, #portafolio, #reserva y #contacto 
--main
--section#inicio
--section#portafolio
--section#reserva
--footer#contacto 
-
-Equipo:
-Proyecto desarrollado de forma colaborativa
+* *Cristóbal Villalobos:* Líder / Coordinador (Estructura base HTML y Footer)
+* *Ivanna Villarroel:* Frontend / Maquetación (Formulario y validaciones Bootstrap)
+* *Bastian Alarcón:* Diseño UI/UX (Navegación y lógica JavaScript/Fetch)
