@@ -1,0 +1,5 @@
+[
+    { "id": 1, "titulo": "Tatuaje Floral", "imagen": "https://via.placeholder.com/300x200?text=Tatuaje+Floral" },
+    { "id": 2, "titulo": "Diseño Geométrico", "imagen": "https://via.placeholder.com/300x200?text=Geométrico" },
+    { "id": 3, "titulo": "Retrato Realista", "imagen": "https://via.placeholder.com/300x200?text=Retrato" }
+]
