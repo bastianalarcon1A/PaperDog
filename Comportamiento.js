@@ -1,4 +1,4 @@
-// Cargar datos del portafolio con Fetch
+// 1. Cargar datos del portafolio con Fetch
 fetch('trabajos.json')
     .then(response => response.json())
     .then(data => {
@@ -18,11 +18,11 @@ fetch('trabajos.json')
     })
     .catch(error => console.error('Error cargando los trabajos:', error));
 
-// Validación del formulario y Modal
+// 2. Validación del formulario y Modal
 document.getElementById('formReserva').addEventListener('submit', function (event) {
     event.preventDefault();
     event.stopPropagation();
-
+    
     let form = this;
     let edad = document.getElementById('edad').value;
 
@@ -33,12 +33,31 @@ document.getElementById('formReserva').addEventListener('submit', function (even
         // Mostrar Modal si es válido
         let nombre = document.getElementById('nombre').value;
         document.getElementById('mensajeExito').innerText = "Gracias " + nombre + ", tu solicitud de reserva ha sido recibida.";
-
+        
         var modal = new bootstrap.Modal(document.getElementById('exitoModal'));
         modal.show();
-
+        
+        // --- NUEVO: Guardar en localStorage ---
+        localStorage.setItem('nombreCliente', nombre);
+        // Actualizamos el saludo inmediatamente
+        actualizarSaludo(); 
+        
         // Limpiar formulario
         form.reset();
         form.classList.remove('was-validated');
     }
 }, false);
+
+// --- NUEVO: Función para usar localStorage ---
+function actualizarSaludo() {
+    let nombreGuardado = localStorage.getItem('nombreCliente');
+    let h1Inicio = document.querySelector('#inicio h1');
+    
+    if (nombreGuardado) {
+        // Si hay un nombre guardado, cambiamos el título principal
+        h1Inicio.innerText = "¡Bienvenido de nuevo, " + nombreGuardado + "!";
+    }
+}
+
+// Ejecutar la función al cargar la página por si ya había un nombre guardado
+actualizarSaludo();
