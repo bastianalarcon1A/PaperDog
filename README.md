@@ -17,7 +17,7 @@ La página se organiza en secciones a las que se accede mediante anclas (scroll 
 | Sección | ID | Descripción | Encargado(a) |
 | :--- | :--- | :--- | :--- |
 | Navegación | `#navbar` | Menú fijo con logo "PaperDog" y enlaces a todas las secciones. | Bastian Alarcón |
-| Inicio | `#inicio` | Encabezado principal (Hero): "PaperDog - Artista Tatuador". | Cristóbal Villalobos |
+| Inicio | `#inicio` | Encabezado principal: "PaperDog - Artista Tatuador". | Cristóbal Villalobos |
 | Portafolio | `#portafolio` | Galería de trabajos del artista (Carga dinámica con JSON). | Bastian Alarcón |
 | Reserva | `#reserva` | Formulario con validación visual para agendar una hora. | Ivanna Villarroel |
 | Contacto | `#contacto` | Footer con datos de contacto y redes sociales. | Cristóbal Villalobos |
