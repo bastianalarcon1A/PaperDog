@@ -1,11 +1,22 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    // 1. Cargar datos del portafolio con Fetch, Spinner y manejo de errores
+    // 1. Función para leer localStorage y mostrar el saludo al cargar o enviar
+    function actualizarSaludo() {
+        let nombreGuardado = localStorage.getItem('nombreCliente');
+        let h1Inicio = document.getElementById('titulo-inicio') || document.querySelector('#inicio h1');
+        if (nombreGuardado && h1Inicio) {
+            h1Inicio.innerText = "¡Bienvenido de nuevo, " + nombreGuardado + "!";
+        }
+    }
+
+    actualizarSaludo();
+
+    // 2. Cargar datos del portafolio con Fetch, Spinner y ampliación al hacer clic
     let galeria = document.getElementById('galeria-trabajos');
     if (galeria) {
         galeria.innerHTML = '<div class="text-center w-100 py-4"><div class="spinner-border text-secondary" role="status"><span class="visually-hidden">Cargando...</span></div></div>';
 
-        fetch('trabajos.json')
+        fetch('trabajos.json?v=3')
             .then(response => {
                 if (!response.ok) throw new Error('Error en la red');
                 return response.json();
@@ -13,12 +24,14 @@ document.addEventListener("DOMContentLoaded", function() {
             .then(data => {
                 galeria.innerHTML = '';
                 data.forEach(trabajo => {
+                    let desc = trabajo.descripcion || trabajo.titulo;
                     galeria.innerHTML += `
                         <div class="col-sm-12 col-md-4 mb-4">
-                            <div class="card h-100">
+                            <div class="card h-100 shadow-sm" style="cursor: pointer;" onclick="abrirModalImagen('${trabajo.titulo}', '${trabajo.imagen}', '${desc}')">
                                 <img src="${trabajo.imagen}" class="card-img-top" alt="${trabajo.titulo}">
                                 <div class="card-body">
                                     <h5 class="card-title">${trabajo.titulo}</h5>
+                                    <p class="card-text small text-muted">${desc}</p>
                                 </div>
                             </div>
                         </div>
@@ -26,75 +39,71 @@ document.addEventListener("DOMContentLoaded", function() {
                 });
             })
             .catch(error => {
-                console.error('Error cargando los trabajos:', error);
+                console.error('Error cargando trabajos.json:', error);
                 galeria.innerHTML = '<div class="alert alert-danger w-100 text-center" role="alert">No se pudieron cargar los trabajos. Por favor, intenta de nuevo más tarde.</div>';
             });
     }
 
-    // 2. Validación del formulario, LocalStorage y Modal
+    // 3. Validación del formulario, guardado en localStorage y Modal directo
     let formReserva = document.getElementById('formReserva');
     if (formReserva) {
-        formReserva.addEventListener('submit', function (event) {
+        formReserva.addEventListener('submit', function(event) {
             event.preventDefault();
             event.stopPropagation();
-            
+
             let form = this;
             let edad = parseInt(document.getElementById('edad').value, 10);
 
-            // Validar campos obligatorios y edad
             if (!form.checkValidity() || isNaN(edad) || edad < 18) {
                 form.classList.add('was-validated');
             } else {
-                let nombre = document.getElementById('nombre').value;
+                let nombre = document.getElementById('nombre').value.trim();
+                let tamano = document.getElementById('tamano').value;
 
-                // A. Guardar primero en localStorage y actualizar el saludo
                 localStorage.setItem('nombreCliente', nombre);
+                localStorage.setItem('tamanoTatuaje', tamano);
                 actualizarSaludo();
 
-                // B. Mostrar alerta confirmando el guardado
-                alert("¡Tus datos han sido guardados en el navegador correctamente!");
-
-                // C. Mostrar Modal de Bootstrap
                 let mensajeExito = document.getElementById('mensajeExito');
                 if (mensajeExito) {
-                    mensajeExito.innerText = "Gracias " + nombre + ", tu solicitud de reserva ha sido recibida.";
+                    mensajeExito.innerText = "Gracias " + nombre + ", tu solicitud para un tatuaje " + tamano + " ha sido recibida.";
                 }
-                
-                if (typeof bootstrap !== 'undefined') {
-                    var modal = new bootstrap.Modal(document.getElementById('exitoModal'));
+
+                let modalElement = document.getElementById('exitoModal');
+                if (modalElement && typeof bootstrap !== 'undefined') {
+                    let modal = bootstrap.Modal.getOrCreateInstance(modalElement);
                     modal.show();
                 }
 
-                // D. Limpiar formulario
                 form.reset();
                 form.classList.remove('was-validated');
             }
         }, false);
     }
 
-    // 3. Función para usar localStorage y cambiar el título
-    function actualizarSaludo() {
-        let nombreGuardado = localStorage.getItem('nombreCliente');
-        console.log("Nombre recuperado de localStorage:", nombreGuardado); 
-        
-        let h1Inicio = document.querySelector('#inicio h1');
-        if (nombreGuardado && h1Inicio) {
-            h1Inicio.innerText = "¡Bienvenido de nuevo, " + nombreGuardado + "!";
-        }
-    }
-
-    // Ejecutar la función al cargar la página
-    actualizarSaludo();
-
     // 4. Auto-cierre del Menú en Dispositivos Móviles
     document.querySelectorAll('.navbar-nav .nav-link').forEach(enlace => {
         enlace.addEventListener('click', () => {
-            const menu = document.getElementById('navbarNav'); 
+            const menu = document.getElementById('navbarNav');
             if (menu && menu.classList.contains('show') && typeof bootstrap !== 'undefined') {
-                const colapso = new bootstrap.Collapse(menu);
-                colapso.toggle();
+                const colapso = bootstrap.Collapse.getOrCreateInstance(menu);
+                colapso.hide();
             }
         });
     });
 
 });
+
+// Función global para abrir la imagen ampliada en el Modal
+function abrirModalImagen(titulo, imagenSrc, descripcion) {
+    document.getElementById('modalImagenTitulo').innerText = titulo;
+    document.getElementById('modalImagenSrc').src = imagenSrc;
+    document.getElementById('modalImagenSrc').alt = titulo;
+    document.getElementById('modalImagenDesc').innerText = descripcion;
+
+    let modalImgElement = document.getElementById('modalImagen');
+    if (modalImgElement && typeof bootstrap !== 'undefined') {
+        let modalImg = bootstrap.Modal.getOrCreateInstance(modalImgElement);
+        modalImg.show();
+    }
+}
