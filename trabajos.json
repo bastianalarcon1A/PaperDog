@@ -1,5 +1,20 @@
 [
-    { "id": 1, "titulo": "Tatuaje Floral", "imagen": "https://via.placeholder.com/300x200?text=Tatuaje+Floral" },
-    { "id": 2, "titulo": "Diseño Geométrico", "imagen": "https://via.placeholder.com/300x200?text=Geométrico" },
-    { "id": 3, "titulo": "Retrato Realista", "imagen": "https://via.placeholder.com/300x200?text=Retrato" }
+    {
+        "id": 1,
+        "titulo": "Tatuaje Floral",
+        "imagen": "https://placehold.co/600x400/212529/FFF?text=Tatuaje+Floral",
+        "descripcion": "Diseño botánico en línea fina realizado en antebrazo."
+    },
+    {
+        "id": 2,
+        "titulo": "Diseño Geométrico",
+        "imagen": "https://placehold.co/600x400/343a40/FFF?text=Diseno+Geometrico",
+        "descripcion": "Composición simétrica en puntillismo y líneas limpias."
+    },
+    {
+        "id": 3,
+        "titulo": "Retrato Realista",
+        "imagen": "https://placehold.co/600x400/1a1d20/FFF?text=Retrato+Realista",
+        "descripcion": "Trabajo en sombras y contraste suave."
+    }
 ]
