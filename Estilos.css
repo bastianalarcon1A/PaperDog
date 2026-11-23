@@ -6,9 +6,3 @@ body {
     background-color: #343a40;
     color: white;
 }
-.gif-footer {
-  width: 48px;       /* Ajusta a 32px, 40px, 64px, etc. */
-  height: 48px;      /* Mantén igual o usa height: auto si quieres conservar proporción */
-  object-fit: cover; /* Evita que se deforme si el GIF no es cuadrado */
-  border-radius: 8px;
-}
