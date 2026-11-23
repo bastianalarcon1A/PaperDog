@@ -1,20 +1,32 @@
 [
     {
         "id": 1,
-        "titulo": "Tatuaje Floral",
-        "imagen": "https://placehold.co/600x400/212529/FFF?text=Tatuaje+Floral",
-        "descripcion": "Diseño botánico en línea fina realizado en antebrazo."
+        "titulo": "Tatuaje 1",
+        "imagen": "img/1.webp",
+        "descripcion": "Trabajo realizado por PaperDog."
     },
     {
         "id": 2,
-        "titulo": "Diseño Geométrico",
-        "imagen": "https://placehold.co/600x400/343a40/FFF?text=Diseno+Geometrico",
-        "descripcion": "Composición simétrica en puntillismo y líneas limpias."
+        "titulo": "Tatuaje 2",
+        "imagen": "img/2.webp",
+        "descripcion": "Trabajo realizado por PaperDog."
     },
     {
         "id": 3,
-        "titulo": "Retrato Realista",
-        "imagen": "https://placehold.co/600x400/1a1d20/FFF?text=Retrato+Realista",
-        "descripcion": "Trabajo en sombras y contraste suave."
+        "titulo": "Tatuaje 3",
+        "imagen": "img/3.webp",
+        "descripcion": "Trabajo realizado por PaperDog."
+    },
+    {
+        "id": 4,
+        "titulo": "Tatuaje 4",
+        "imagen": "img/4.webp",
+        "descripcion": "Trabajo realizado por PaperDog."
+    },
+    {
+        "id": 5,
+        "titulo": "Tatuaje 5",
+        "imagen": "img/5.webp",
+        "descripcion": "Trabajo realizado por PaperDog."
     }
 ]
