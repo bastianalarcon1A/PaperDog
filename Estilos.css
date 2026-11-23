@@ -6,3 +6,9 @@ body {
     background-color: #343a40;
     color: white;
 }
+.gif-footer {
+  width: 60px;       
+  height: 60px;      
+  object-fit: cover; 
+  border-radius: 8px;
+}
