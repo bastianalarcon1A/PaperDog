@@ -6,3 +6,7 @@ body {
     background-color: #343a40;
     color: white;
 }
+.card-img-top {
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+}
