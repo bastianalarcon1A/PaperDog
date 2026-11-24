@@ -12,3 +12,13 @@ body {
   object-fit: cover; 
   border-radius: 8px;
 }
+
+/* Reglas agregadas para el portafolio */
+#galeria-trabajos .card-body {
+    min-height: 110px;
+}
+
+#galeria-trabajos .card-text {
+    color: #ffffff;
+    font-style: italic;
+}
