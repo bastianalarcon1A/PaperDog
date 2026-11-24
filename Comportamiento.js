@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         galeria.classList.add("row", "justify-content-center", "g-4");
         galeria.innerHTML = '<div class="text-center w-100 py-4"><div class="spinner-border text-light" role="status"><span class="visually-hidden">Cargando...</span></div></div>';
 
-        fetch("trabajos.json?v=8")
+        fetch('trabajos.json?v=9')
             .then(response => {
                 if (!response.ok) {
                     throw new Error("Error al cargar trabajos.json");
