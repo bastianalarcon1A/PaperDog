@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
         galeria.classList.add('justify-content-center');
         galeria.innerHTML = '<div class="text-center w-100 py-4"><div class="spinner-border text-secondary" role="status"><span class="visually-hidden">Cargando...</span></div></div>';
 
-        fetch('trabajos.json?v=4')
+        fetch('trabajos.json?v=6')
             .then(response => {
                 if (!response.ok) throw new Error('Error en la red');
                 return response.json();
