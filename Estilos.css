@@ -2,20 +2,39 @@ body {
     background-color: #212529; /* Color oscuro de Bootstrap */
     color: #f8f9fa; /* Texto claro */
 }
+
 .card {
     background-color: #343a40;
     color: white;
 }
+
 .gif-footer {
-  width: 150px;       
-  height: 150px;      
-  object-fit: cover; 
-  border-radius: 8px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-/* Reglas agregadas para el portafolio */
+/* Galería dinámica: tamaño uniforme, centrado y texto blanco en cursiva */
+#galeria-trabajos .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#galeria-trabajos .card-img-top {
+    height: 220px;
+    object-fit: cover;
+}
+
 #galeria-trabajos .card-body {
-    min-height: 110px;
+    flex: 1 1 auto;
+    min-height: 115px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 #galeria-trabajos .card-text {
