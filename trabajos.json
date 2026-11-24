@@ -1,32 +1,32 @@
 [
     {
         "id": 1,
-        "titulo": "Tatuaje 1",
-        "imagen": "img/1.webp",
-        "descripcion": "Trabajo realizado por PaperDog."
+        "titulo": "Tatuaje Floral",
+        "imagen": "https://placehold.co/600x400/212529/FFF?text=Tatuaje+Floral",
+        "descripcion": "Línea fina botánica en antebrazo."
     },
     {
         "id": 2,
-        "titulo": "Tatuaje 2",
-        "imagen": "img/2.webp",
-        "descripcion": "Trabajo realizado por PaperDog."
+        "titulo": "Diseño Geométrico",
+        "imagen": "https://placehold.co/600x400/343a40/FFF?text=Diseno+Geometrico",
+        "descripcion": "Trazos simétricos y puntillismo."
     },
     {
         "id": 3,
-        "titulo": "Tatuaje 3",
-        "imagen": "img/3.webp",
-        "descripcion": "Trabajo realizado por PaperDog."
+        "titulo": "Retrato Realista",
+        "imagen": "https://placehold.co/600x400/1a1d20/FFF?text=Retrato+Realista",
+        "descripcion": "Sombreado en escala de grises."
     },
     {
         "id": 4,
-        "titulo": "Tatuaje 4",
-        "imagen": "img/4.webp",
-        "descripcion": "Trabajo realizado por PaperDog."
+        "titulo": "Blackwork Ornamental",
+        "imagen": "https://placehold.co/600x400/212529/FFF?text=Blackwork+Ornamental",
+        "descripcion": "Detalles oscuros y alto contraste."
     },
     {
         "id": 5,
-        "titulo": "Tatuaje 5",
-        "imagen": "img/5.webp",
-        "descripcion": "Trabajo realizado por PaperDog."
+        "titulo": "Minimalista Fine Line",
+        "imagen": "https://placehold.co/600x400/343a40/FFF?text=Minimalista+Fine+Line",
+        "descripcion": "Trazo delicado y composición limpia."
     }
 ]
