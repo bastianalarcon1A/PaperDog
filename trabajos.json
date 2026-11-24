@@ -1,32 +1,32 @@
 [
     {
         "id": 1,
-        "titulo": "Tatuaje Floral",
+        "titulo": "Polilla estilo tradi americano",
         "imagen": "img/1.webp",
-        "descripcion": "Línea fina botánica en antebrazo."
+        "descripcion": "Línea marcada y sombreado clásico."
     },
     {
         "id": 2,
-        "titulo": "Diseño Geométrico",
+        "titulo": "Rama de Notro",
         "imagen": "img/2.webp",
-        "descripcion": "Trazos simétricos y puntillismo."
+        "descripcion": "Diseño botánico nativo y limpio."
     },
     {
         "id": 3,
-        "titulo": "Retrato Realista",
+        "titulo": "Rama de Radal",
         "imagen": "img/3.webp",
-        "descripcion": "Sombreado en escala de grises."
+        "descripcion": "Ilustración natural de trazo fino."
     },
     {
         "id": 4,
-        "titulo": "Blackwork Ornamental",
+        "titulo": "Espinas sombreado púrpura",
         "imagen": "img/4.webp",
-        "descripcion": "Detalles oscuros y alto contraste."
+        "descripcion": "Tonos violetas y contraste suave."
     },
     {
         "id": 5,
-        "titulo": "Minimalista Fine Line",
+        "titulo": "Flor estilo tradicional Americano",
         "imagen": "img/5.webp",
-        "descripcion": "Trazo delicado y composición limpia."
+        "descripcion": "Trazo firme y estética clásica."
     }
 ]
