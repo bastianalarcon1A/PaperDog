@@ -2,31 +2,31 @@
     {
         "id": 1,
         "titulo": "Tatuaje Floral",
-        "imagen": "https://placehold.co/600x400/212529/FFF?text=Tatuaje+Floral",
+        "imagen": "img/nombre-archivo-1.jpg",
         "descripcion": "Línea fina botánica en antebrazo."
     },
     {
         "id": 2,
         "titulo": "Diseño Geométrico",
-        "imagen": "https://placehold.co/600x400/343a40/FFF?text=Diseno+Geometrico",
+        "imagen": "img/nombre-archivo-2.jpg",
         "descripcion": "Trazos simétricos y puntillismo."
     },
     {
         "id": 3,
         "titulo": "Retrato Realista",
-        "imagen": "https://placehold.co/600x400/1a1d20/FFF?text=Retrato+Realista",
+        "imagen": "img/nombre-archivo-3.jpg",
         "descripcion": "Sombreado en escala de grises."
     },
     {
         "id": 4,
         "titulo": "Blackwork Ornamental",
-        "imagen": "https://placehold.co/600x400/212529/FFF?text=Blackwork+Ornamental",
+        "imagen": "img/nombre-archivo-4.jpg",
         "descripcion": "Detalles oscuros y alto contraste."
     },
     {
         "id": 5,
         "titulo": "Minimalista Fine Line",
-        "imagen": "https://placehold.co/600x400/343a40/FFF?text=Minimalista+Fine+Line",
+        "imagen": "img/nombre-archivo-5.jpg",
         "descripcion": "Trazo delicado y composición limpia."
     }
 ]
