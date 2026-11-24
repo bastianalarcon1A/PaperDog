@@ -11,27 +11,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
     actualizarSaludo();
 
-    // 2. Cargar datos del portafolio con Fetch, Spinner y ampliación al hacer clic
+    // 2. Cargar datos del portafolio con Fetch, Spinner, distribución centrada y ampliación
     let galeria = document.getElementById('galeria-trabajos');
     if (galeria) {
+        galeria.classList.add('justify-content-center');
         galeria.innerHTML = '<div class="text-center w-100 py-4"><div class="spinner-border text-secondary" role="status"><span class="visually-hidden">Cargando...</span></div></div>';
 
-        fetch('trabajos.json?v=3')
+        fetch('trabajos.json?v=4')
             .then(response => {
                 if (!response.ok) throw new Error('Error en la red');
                 return response.json();
             })
             .then(data => {
                 galeria.innerHTML = '';
-                data.forEach(trabajo => {
+                data.forEach((trabajo, index) => {
                     let desc = trabajo.descripcion || trabajo.titulo;
+                    // 3 tarjetas arriba (col-md-4) y 2 tarjetas abajo centradas (col-md-5) cuando son 5
+                    let colClase = (data.length === 5 && index >= 3) ? 'col-sm-12 col-md-5' : 'col-sm-12 col-md-4';
+
                     galeria.innerHTML += `
-                        <div class="col-sm-12 col-md-4 mb-4">
-                            <div class="card h-100 shadow-sm" style="cursor: pointer;" onclick="abrirModalImagen('${trabajo.titulo}', '${trabajo.imagen}', '${desc}')">
+                        <div class="${colClase} mb-4 d-flex">
+                            <div class="card bg-dark text-white h-100 w-100 shadow-sm text-center" style="cursor: pointer;" onclick="abrirModalImagen('${trabajo.titulo}', '${trabajo.imagen}', '${desc}')">
                                 <img src="${trabajo.imagen}" class="card-img-top" alt="${trabajo.titulo}">
-                                <div class="card-body">
-                                    <h5 class="card-title">${trabajo.titulo}</h5>
-                                    <p class="card-text small text-muted">${desc}</p>
+                                <div class="card-body d-flex flex-column justify-content-center">
+                                    <h5 class="card-title text-white">${trabajo.titulo}</h5>
+                                    <p class="card-text small text-white fst-italic mb-0">${desc}</p>
                                 </div>
                             </div>
                         </div>
