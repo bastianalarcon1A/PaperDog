@@ -2,31 +2,31 @@
     {
         "id": 1,
         "titulo": "Tatuaje Floral",
-        "imagen": "img/nombre-archivo-1.jpg",
+        "imagen": "img/1.webp",
         "descripcion": "Línea fina botánica en antebrazo."
     },
     {
         "id": 2,
         "titulo": "Diseño Geométrico",
-        "imagen": "img/nombre-archivo-2.jpg",
+        "imagen": "img/2.webp",
         "descripcion": "Trazos simétricos y puntillismo."
     },
     {
         "id": 3,
         "titulo": "Retrato Realista",
-        "imagen": "img/nombre-archivo-3.jpg",
+        "imagen": "img/3.webp",
         "descripcion": "Sombreado en escala de grises."
     },
     {
         "id": 4,
         "titulo": "Blackwork Ornamental",
-        "imagen": "img/nombre-archivo-4.jpg",
+        "imagen": "img/4.webp",
         "descripcion": "Detalles oscuros y alto contraste."
     },
     {
         "id": 5,
         "titulo": "Minimalista Fine Line",
-        "imagen": "img/nombre-archivo-5.jpg",
+        "imagen": "img/5.webp",
         "descripcion": "Trazo delicado y composición limpia."
     }
 ]
